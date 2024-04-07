@@ -18,5 +18,13 @@ class GetDataFromClient:
             print(f"Data validation failed: {e}")
 
 
+class GetDataFromDatabase:
+    def __init__(self):
+        self.database = DataFromAirVisual()
+
+    def data_from_database(self):
+        return self.database.get_data()
+
+
 if __name__ == "__main__":
     GetDataFromClient().add_data_to_database()

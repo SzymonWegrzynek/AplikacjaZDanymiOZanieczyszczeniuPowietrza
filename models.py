@@ -2,25 +2,25 @@ from pydantic import BaseModel
 
 
 class Pollution(BaseModel):
-    ts: str
-    aqius: int
-    mainus: str
-    aqicn: int
-    maincn: str
+    timestamp: str
+    air_quality_index_us: int
+    main_pollutant_us: str
+    air_quality_index_cn: int
+    main_pollutant_cn: str
 
 
 class Weather(BaseModel):
-    ts: str
-    tp: int
-    pr: int
-    hu: int
-    ws: float
-    wd: int
-    ic: str
+    timestamp: str
+    temperature: int
+    pressure: int
+    humidity: int
+    wind_speed: float
+    wind_direction: int
+    weather_icon: str
 
 
 class Location(BaseModel):
-    type: str
+    location_type: str
     coordinates: list[float]
 
 
